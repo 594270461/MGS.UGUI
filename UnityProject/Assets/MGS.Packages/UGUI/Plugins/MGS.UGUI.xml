@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MGS.UGUI</name>
+    </assembly>
+    <members>
+        <member name="T:MGS.UGUI.TextInputText">
+            <summary>
+            Text-Input-Text panel.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.TextInputText.ipt_Content">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.TextInputText.txt_Caption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.TextInputText.txt_Stamp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.TextInputText.Content">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.TextInputText.Caption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.TextInputText.ContentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.TextInputText.Stamp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.TextInputText.OnValueChangedEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.TextInputText.onValueChangedEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.TextInputText.OnEndEditEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.TextInputText.onEndEditEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.TextInputText.Awake">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.TextInputText.InitForInteger(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+        </member>
+        <member name="M:MGS.UGUI.TextInputText.Refresh(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="tittle"></param>
+            <param name="content"></param>
+            <param name="caption"></param>
+            <param name="stamp"></param>
+        </member>
+        <member name="M:MGS.UGUI.TextInputText.Ipt_Content_OnValueChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:MGS.UGUI.TextInputText.Ipt_Content_OnEndEdit(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:MGS.UGUI.UIPanel">
+            <summary>
+            UI panel.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIPanel.txt_Tittle">
+            <summary>
+            The Text component for tittle,
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UIPanel.Tittle">
+            <summary>
+            Tittle of panel.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UIComponent">
+            <summary>
+            UI component.
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UIComponent.IsGOActive">
+            <summary>
+            The local active state of this GameObject. (Read Only)
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIComponent.SetGOActive(System.Boolean)">
+            <summary>
+            Activates/Deactivates the GameObject.
+            </summary>
+            <param name="isActive"></param>
+        </member>
+        <member name="T:MGS.UGUI.ButtonCollector">
+            <summary>
+            Collector base prefab for button
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.ButtonCollector.root">
+            <summary>
+            Root of button items.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.ButtonCollector.prefab">
+            <summary>
+            Prefab for item clone.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.ButtonCollector.OnItemClickEvent">
+            <summary>
+            On item click event (Index of item, value of item).
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.ButtonCollector.onItemClickEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.ButtonCollector.Refresh(System.String[])">
+            <summary>
+            Refresh button item for data items.
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="T:MGS.UGUI.SearchSelector">
+            <summary>
+            Search selector with InputField-Button-Collector.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.ipt_Keyword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.txt_Caption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.btn_Search">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.txt_Search">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.img_Search">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.isNullMatchAll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.opn_Search">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.opn_Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.btnCollector">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.SearchSelector.OnSelectEvent">
+            <summary>
+            On select event (Index of the select item, value of the select item).
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.onSelectEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.SearchSelector.Keyword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.SearchSelector.Caption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.SearchSelector.items">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.SearchSelector.Awake">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.SearchSelector.Refresh(System.String[],System.Int32,System.String)">
+            <summary>
+            Refresh data items and select.
+            </summary>
+            <param name="items"></param>
+            <param name="select"></param>
+            <param name="caption"></param>
+        </member>
+        <member name="M:MGS.UGUI.SearchSelector.Ipt_Keyword_OnValueChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="keyword"></param>
+        </member>
+        <member name="M:MGS.UGUI.SearchSelector.Btn_Search_OnClick">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.SearchSelector.BtnCollector_OnItemClickEvent(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:MGS.UGUI.SearchSelector.ShowSearchResults(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="keyword"></param>
+        </member>
+        <member name="M:MGS.UGUI.SearchSelector.SetSearchBtnOption(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="keyword"></param>
+        </member>
+        <member name="M:MGS.UGUI.SearchSelector.SearchDataItems(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="keyword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.SearchSelector.RefreshSearchItems(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="T:MGS.UGUI.UIWidget">
+            <summary>
+            UI widget.
+            </summary>
+        </member>
+    </members>
+</doc>
