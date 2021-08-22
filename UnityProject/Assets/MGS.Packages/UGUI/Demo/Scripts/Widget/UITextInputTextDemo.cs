@@ -1,12 +1,12 @@
 /*************************************************************************
  *  Copyright (c) 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  UIWidgetDemo.cs
+ *  File         :  UITextInputTextDemo.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
  *  Version      :  0.1.0
- *  Date         :  8/6/2021
+ *  Date         :  8/8/2021
  *  Description  :  Initial development version.
  *************************************************************************/
 
@@ -14,30 +14,24 @@ using UnityEngine;
 
 namespace MGS.UGUI.Demo
 {
-    public class UIWidgetDemo : MonoBehaviour
+    public class UITextInputTextDemo : MonoBehaviour
     {
-        [SerializeField]
-        private SearchSelector searchSelector;
+        public UITextInputText inputText;
 
         private void Awake()
         {
-            searchSelector.OnSelectEvent += SearchSelector_OnSelectEvent;
+            inputText.InitForInteger(56, 0, 1000);
+            inputText.OnEndEditEvent += InputText_OnEndEditEvent;
         }
 
         private void Start()
         {
-            var items = new string[]
-            {
-                "0","01","012", "0123","01234"
-            };
-
-            var caption = "Enter keywords...";
-            searchSelector.Refresh(items, -1, caption);
+            inputText.Refresh("Weight:", "56", "Enter number...", "KG");
         }
 
-        private void SearchSelector_OnSelectEvent(int index, string value)
+        private void InputText_OnEndEditEvent(string value)
         {
-            Debug.LogFormat("SearchSelector_OnSelectEvent index is {0}, value is {1}", index, value);
+            Debug.LogFormat("InputText_OnEndEditEvent value is {0}", value);
         }
     }
 }

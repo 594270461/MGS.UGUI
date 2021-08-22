@@ -4,117 +4,526 @@
         <name>MGS.UGUI</name>
     </assembly>
     <members>
-        <member name="T:MGS.UGUI.TextInputText">
+        <member name="T:MGS.UGUI.UIBehaviourExtension">
             <summary>
-            Text-Input-Text panel.
+            UI behaviour extension.
             </summary>
         </member>
-        <member name="F:MGS.UGUI.TextInputText.ipt_Content">
+        <member name="M:MGS.UGUI.UIBehaviourExtension.RequireComponent``1(UnityEngine.EventSystems.UIBehaviour)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ui"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIBehaviourExtension.RequirePointerListener(UnityEngine.EventSystems.UIBehaviour)">
+            <summary>
+            
+            </summary>
+            <param name="ui"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIBehaviourExtension.RequireDragListener(UnityEngine.EventSystems.UIBehaviour)">
+            <summary>
+            
+            </summary>
+            <param name="ui"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIBehaviourExtension.RequireSelectListener(UnityEngine.EventSystems.UIBehaviour)">
+            <summary>
+            
+            </summary>
+            <param name="ui"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIBehaviourExtension.RequireCanvasRaycasterGroup(UnityEngine.EventSystems.UIBehaviour,System.Boolean,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ui"></param>
+            <param name="overrideSorting"></param>
+            <param name="sortingOrder"></param>
+        </member>
+        <member name="T:MGS.UGUI.UIDragger">
+            <summary>
+            UI dragger.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UIAlphaFader">
+            <summary>
+            UI alpha fader.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIAlphaFader.canvasGroup">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.TextInputText.txt_Caption">
+        <member name="F:MGS.UGUI.UIAlphaFader.from">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.TextInputText.txt_Stamp">
+        <member name="F:MGS.UGUI.UIAlphaFader.to">
             <summary>
             
             </summary>
         </member>
-        <member name="P:MGS.UGUI.TextInputText.Content">
+        <member name="P:MGS.UGUI.UIAlphaFader.Alpha">
             <summary>
             
             </summary>
         </member>
-        <member name="P:MGS.UGUI.TextInputText.Caption">
+        <member name="M:MGS.UGUI.UIAlphaFader.Awake">
             <summary>
             
             </summary>
         </member>
-        <member name="P:MGS.UGUI.TextInputText.ContentType">
+        <member name="M:MGS.UGUI.UIAlphaFader.StartFade(System.Single,System.Single,System.Single,System.Single,System.Action)">
+            <summary>
+            
+            </summary>
+            <param name="delay"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="duration"></param>
+            <param name="faded"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIAlphaFader.OnFade(System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="progress"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIAlphaFader.Evaluate(System.Single,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGS.UGUI.UIColorFader">
+            <summary>
+            UI Color Fader.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIColorFader.graphic">
             <summary>
             
             </summary>
         </member>
-        <member name="P:MGS.UGUI.TextInputText.Stamp">
+        <member name="F:MGS.UGUI.UIColorFader.from">
             <summary>
             
             </summary>
         </member>
-        <member name="E:MGS.UGUI.TextInputText.OnValueChangedEvent">
+        <member name="F:MGS.UGUI.UIColorFader.to">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.TextInputText.onValueChangedEvent">
+        <member name="P:MGS.UGUI.UIColorFader.Color">
             <summary>
             
             </summary>
         </member>
-        <member name="E:MGS.UGUI.TextInputText.OnEndEditEvent">
+        <member name="M:MGS.UGUI.UIColorFader.Awake">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.TextInputText.onEndEditEvent">
+        <member name="M:MGS.UGUI.UIColorFader.StartFade(System.Single,UnityEngine.Color,UnityEngine.Color,System.Single,System.Action)">
+            <summary>
+            
+            </summary>
+            <param name="delay"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="duration"></param>
+            <param name="faded"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIColorFader.OnFade(System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="progress"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIColorFader.Evaluate(UnityEngine.Color,UnityEngine.Color,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGS.UGUI.UIFader">
+            <summary>
+            UI fader.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIFader.fader">
             <summary>
             
             </summary>
         </member>
-        <member name="M:MGS.UGUI.TextInputText.Awake">
+        <member name="M:MGS.UGUI.UIFader.StartFade(System.Single,System.Single,System.Action)">
+            <summary>
+            Start fade.
+            </summary>
+            <param name="delay"></param>
+            <param name="duration"></param>
+            <param name="faded"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIFader.StopFade">
+            <summary>
+            Stop fade.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIFader.OnBeginFade">
             <summary>
             
             </summary>
         </member>
-        <member name="M:MGS.UGUI.TextInputText.InitForInteger(System.Int32,System.Int32)">
+        <member name="M:MGS.UGUI.UIFader.OnFade(System.Single)">
             <summary>
             
             </summary>
-            <param name="min"></param>
-            <param name="max"></param>
+            <param name="progress"></param>
         </member>
-        <member name="M:MGS.UGUI.TextInputText.Refresh(System.String,System.String,System.String,System.String)">
+        <member name="M:MGS.UGUI.UIFader.OnEndFade">
             <summary>
             
             </summary>
-            <param name="tittle"></param>
-            <param name="content"></param>
-            <param name="caption"></param>
-            <param name="stamp"></param>
         </member>
-        <member name="M:MGS.UGUI.TextInputText.Ipt_Content_OnValueChanged(System.String)">
+        <member name="T:MGS.UGUI.UIPositionFader">
             <summary>
-            
+            UI position fader.
             </summary>
-            <param name="value"></param>
         </member>
-        <member name="M:MGS.UGUI.TextInputText.Ipt_Content_OnEndEdit(System.String)">
+        <member name="F:MGS.UGUI.UIPositionFader.from">
             <summary>
             
             </summary>
-            <param name="value"></param>
+        </member>
+        <member name="F:MGS.UGUI.UIPositionFader.to">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIPositionFader.StartFade(System.Single,UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Action)">
+            <summary>
+            Start fade.
+            </summary>
+            <param name="delay"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="duration"></param>
+            <param name="faded"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIPositionFader.OnFade(System.Single)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIPositionFader.Evaluate(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGS.UGUI.UIScaleFader">
+            <summary>
+            UI scale fader.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIScaleFader.from">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIScaleFader.to">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIScaleFader.StartFade(System.Single,UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Action)">
+            <summary>
+            Start fade.
+            </summary>
+            <param name="delay"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="duration"></param>
+            <param name="faded"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIScaleFader.OnFade(System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="progress"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIScaleFader.Evaluate(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGS.UGUI.UIHandler">
+            <summary>
+            UI handler.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UIMirror">
+            <summary>
+            UI mirror.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UIPositioner">
+            <summary>
+            UI positioner.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UISizer">
+            <summary>
+            UI sizer.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UIDragListener">
+             <summary>
+            Event Listener for drag.
+             </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIDragListener.OnInitializePotentialDragEvent">
+            <summary>
+            On initialize potential drag event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIDragListener.OnBeginDragEvent">
+            <summary>
+            On begin drag event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIDragListener.OnDragEvent">
+            <summary>
+            On drag event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIDragListener.OnEndDragEvent">
+            <summary>
+            On end drag event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIDragListener.OnDropEvent">
+            <summary>
+            On drop event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIDragListener.OnScrollEvent">
+            <summary>
+            On scroll event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIDragListener.OnMoveEvent">
+            <summary>
+            On move event.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIDragListener.OnInitializePotentialDrag(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On initialize potential drag.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIDragListener.OnBeginDrag(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On begin drag.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIDragListener.OnDrag(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On drag.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIDragListener.OnEndDrag(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On end drag.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIDragListener.OnDrop(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On drop.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIDragListener.OnScroll(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On scroll.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIDragListener.OnMove(UnityEngine.EventSystems.AxisEventData)">
+            <summary>
+            On move.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="T:MGS.UGUI.UIListener">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UIPointerListener">
+            <summary>
+            Event Listener for pointer.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIPointerListener.OnPointerEnterEvent">
+            <summary>
+            On pointer enter event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIPointerListener.OnPointerExitEvent">
+            <summary>
+            On pointer exit event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIPointerListener.OnPointerDownEvent">
+            <summary>
+            On pointer down event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIPointerListener.OnPointerUpEvent">
+            <summary>
+            On pointer up event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIPointerListener.OnPointerClickEvent">
+            <summary>
+            On pointer click event.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIPointerListener.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer enter.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIPointerListener.OnPointerExit(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer exit.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIPointerListener.OnPointerDown(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer down.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIPointerListener.OnPointerUp(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer up.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIPointerListener.OnPointerClick(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            On pointer click.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="T:MGS.UGUI.UISelectListener">
+             <summary>
+            Event Listener for select.
+             </summary>
+        </member>
+        <member name="E:MGS.UGUI.UISelectListener.OnSelectEvent">
+            <summary>
+            On select event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UISelectListener.OnUpdateSelectedEvent">
+            <summary>
+            On update selected event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UISelectListener.OnDeselectEvent">
+            <summary>
+            On deselect event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UISelectListener.OnSubmitEvent">
+            <summary>
+            On submit event.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UISelectListener.OnCancelEvent">
+            <summary>
+            On cancel event.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UISelectListener.OnSelect(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            On select.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UISelectListener.OnUpdateSelected(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            On update selected.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UISelectListener.OnDeselect(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            On deselect.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UISelectListener.OnSubmit(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            On submit.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
+        </member>
+        <member name="M:MGS.UGUI.UISelectListener.OnCancel(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            On cancel.
+            </summary>
+            <param name="eventData">Pointer event data.</param>
         </member>
         <member name="T:MGS.UGUI.UIPanel">
             <summary>
             UI panel.
             </summary>
         </member>
-        <member name="F:MGS.UGUI.UIPanel.txt_Tittle">
+        <member name="T:MGS.UGUI.UITrigger">
             <summary>
-            The Text component for tittle,
-            </summary>
-        </member>
-        <member name="P:MGS.UGUI.UIPanel.Tittle">
-            <summary>
-            Tittle of panel.
+            UI trigger.
             </summary>
         </member>
         <member name="T:MGS.UGUI.UIComponent">
             <summary>
             UI component.
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UIComponent.RectTrans">
+            <summary>
+            RectTransform component.
             </summary>
         </member>
         <member name="P:MGS.UGUI.UIComponent.IsGOActive">
@@ -128,118 +537,184 @@
             </summary>
             <param name="isActive"></param>
         </member>
-        <member name="T:MGS.UGUI.ButtonCollector">
+        <member name="T:MGS.UGUI.UICoroutine">
             <summary>
-            Collector base prefab for button
+            Coroutine Factory.
             </summary>
         </member>
-        <member name="F:MGS.UGUI.ButtonCollector.root">
+        <member name="M:MGS.UGUI.UICoroutine.Timer(System.Single,System.Action)">
+            <summary>
+            Timer delay to do something.
+            </summary>
+            <param name="delay">Delay seconds.</param>
+            <param name="elapsed">Event on elapsed.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UICoroutine.Timer(System.Single,System.Action{System.Single},System.Action)">
+            <summary>
+            Timer tick to do something.
+            </summary>
+            <param name="duration">Duration seconds.</param>
+            <param name="tick"></param>
+            <param name="elapsed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UICoroutine.Timer(System.Single,System.Single,System.Action,System.Action{System.Single},System.Action)">
+            <summary>
+            Timer delay to tick to do something.
+            </summary>
+            <param name="delay">Delay seconds.</param>
+            <param name="duration">Duration seconds.</param>
+            <param name="timing"></param>
+            <param name="tick"></param>
+            <param name="elapsed"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGS.UGUI.UIButtonCollector">
+            <summary>
+            UI Button-Collector.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIButtonCollector.content">
             <summary>
             Root of button items.
             </summary>
         </member>
-        <member name="F:MGS.UGUI.ButtonCollector.prefab">
+        <member name="F:MGS.UGUI.UIButtonCollector.item">
             <summary>
             Prefab for item clone.
             </summary>
         </member>
-        <member name="E:MGS.UGUI.ButtonCollector.OnItemClickEvent">
-            <summary>
-            On item click event (Index of item, value of item).
-            </summary>
-        </member>
-        <member name="F:MGS.UGUI.ButtonCollector.onItemClickEvent">
+        <member name="F:MGS.UGUI.UIButtonCollector.maxCount">
             <summary>
             
             </summary>
         </member>
-        <member name="M:MGS.UGUI.ButtonCollector.Refresh(System.String[])">
+        <member name="P:MGS.UGUI.UIButtonCollector.MaxCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIButtonCollector.OnItemClickEvent">
+            <summary>
+            On item click event (Index of item, value of item).
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIButtonCollector.onItemClickEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIButtonCollector.Refresh(System.String[])">
             <summary>
             Refresh button item for data items.
             </summary>
             <param name="items"></param>
         </member>
-        <member name="T:MGS.UGUI.SearchSelector">
+        <member name="M:MGS.UGUI.UIButtonCollector.SetContentHeight(System.Int32)">
             <summary>
-            Search selector with InputField-Button-Collector.
+            
+            </summary>
+            <param name="itemCount"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIButtonCollector.Item_OnClick(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:MGS.UGUI.UISearchSelector">
+            <summary>
+            UI Search-Selector.
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.ipt_Keyword">
+        <member name="F:MGS.UGUI.UISearchSelector.ipt_Keyword">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.txt_Caption">
+        <member name="F:MGS.UGUI.UISearchSelector.txt_Caption">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.btn_Search">
+        <member name="F:MGS.UGUI.UISearchSelector.btn_Search">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.txt_Search">
+        <member name="F:MGS.UGUI.UISearchSelector.txt_Search">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.img_Search">
+        <member name="F:MGS.UGUI.UISearchSelector.img_Search">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.isNullMatchAll">
+        <member name="F:MGS.UGUI.UISearchSelector.coll_Search">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.opn_Search">
+        <member name="F:MGS.UGUI.UISearchSelector.emptyMatchAll">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.opn_Clear">
+        <member name="F:MGS.UGUI.UISearchSelector.opn_Search">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.btnCollector">
+        <member name="F:MGS.UGUI.UISearchSelector.opn_Clear">
             <summary>
             
             </summary>
         </member>
-        <member name="E:MGS.UGUI.SearchSelector.OnSelectEvent">
+        <member name="E:MGS.UGUI.UISearchSelector.OnSelectEvent">
             <summary>
             On select event (Index of the select item, value of the select item).
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.onSelectEvent">
+        <member name="F:MGS.UGUI.UISearchSelector.onSelectEvent">
             <summary>
             
             </summary>
         </member>
-        <member name="P:MGS.UGUI.SearchSelector.Keyword">
+        <member name="F:MGS.UGUI.UISearchSelector.ignoreChange">
             <summary>
             
             </summary>
         </member>
-        <member name="P:MGS.UGUI.SearchSelector.Caption">
+        <member name="F:MGS.UGUI.UISearchSelector.ignoreSelect">
             <summary>
             
             </summary>
         </member>
-        <member name="F:MGS.UGUI.SearchSelector.items">
+        <member name="P:MGS.UGUI.UISearchSelector.Keyword">
             <summary>
             
             </summary>
         </member>
-        <member name="M:MGS.UGUI.SearchSelector.Awake">
+        <member name="P:MGS.UGUI.UISearchSelector.Caption">
             <summary>
             
             </summary>
         </member>
-        <member name="M:MGS.UGUI.SearchSelector.Refresh(System.String[],System.Int32,System.String)">
+        <member name="F:MGS.UGUI.UISearchSelector.items">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UISearchSelector.Awake">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UISearchSelector.Refresh(System.String[],System.Int32,System.String)">
             <summary>
             Refresh data items and select.
             </summary>
@@ -247,48 +722,186 @@
             <param name="select"></param>
             <param name="caption"></param>
         </member>
-        <member name="M:MGS.UGUI.SearchSelector.Ipt_Keyword_OnValueChanged(System.String)">
+        <member name="M:MGS.UGUI.UISearchSelector.Ipt_Keyword_Set(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="content"></param>
+            <param name="ignoreChange"></param>
+        </member>
+        <member name="M:MGS.UGUI.UISearchSelector.Ipt_Keyword_Select(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="ignoreSelect"></param>
+        </member>
+        <member name="M:MGS.UGUI.UISearchSelector.Ipt_Keyword_OnValueChanged(System.String)">
             <summary>
             
             </summary>
             <param name="keyword"></param>
         </member>
-        <member name="M:MGS.UGUI.SearchSelector.Btn_Search_OnClick">
+        <member name="M:MGS.UGUI.UISearchSelector.Ipt_Keyword_OnSelectEvent(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:MGS.UGUI.UISearchSelector.Btn_Search_OnClick">
             <summary>
             
             </summary>
         </member>
-        <member name="M:MGS.UGUI.SearchSelector.BtnCollector_OnItemClickEvent(System.Int32,System.String)">
+        <member name="M:MGS.UGUI.UISearchSelector.BtnCollector_OnItemClickEvent(System.Int32,System.String)">
             <summary>
             
             </summary>
             <param name="index"></param>
             <param name="value"></param>
         </member>
-        <member name="M:MGS.UGUI.SearchSelector.ShowSearchResults(System.String)">
+        <member name="M:MGS.UGUI.UISearchSelector.ShowSearchResults(System.String)">
             <summary>
             
             </summary>
             <param name="keyword"></param>
         </member>
-        <member name="M:MGS.UGUI.SearchSelector.SetSearchBtnOption(System.String)">
+        <member name="M:MGS.UGUI.UISearchSelector.SetSearchBtnOption(System.String)">
             <summary>
             
             </summary>
             <param name="keyword"></param>
         </member>
-        <member name="M:MGS.UGUI.SearchSelector.SearchDataItems(System.String)">
+        <member name="M:MGS.UGUI.UISearchSelector.SearchDataItems(System.String)">
             <summary>
             
             </summary>
             <param name="keyword"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.SearchSelector.RefreshSearchItems(System.String[])">
+        <member name="M:MGS.UGUI.UISearchSelector.RefreshSearchItems(System.String[])">
             <summary>
             
             </summary>
             <param name="items"></param>
+        </member>
+        <member name="T:MGS.UGUI.UITextInputText">
+            <summary>
+            UI Text-Input-Text.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextInputText.txt_Tittle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextInputText.ipt_Content">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextInputText.txt_Caption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextInputText.txt_Stamp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UITextInputText.Tittle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UITextInputText.Content">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UITextInputText.Caption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UITextInputText.ContentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UITextInputText.CharacterLimit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UITextInputText.Stamp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UITextInputText.OnValueChangedEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextInputText.onValueChangedEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextInputText.beforeValueChange">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UITextInputText.OnEndEditEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextInputText.onEndEditEvent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextInputText.beforeEndEdit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITextInputText.Awake">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITextInputText.InitForInteger(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="default"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+        </member>
+        <member name="M:MGS.UGUI.UITextInputText.Refresh(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="tittle"></param>
+            <param name="content"></param>
+            <param name="caption"></param>
+            <param name="stamp"></param>
+        </member>
+        <member name="M:MGS.UGUI.UITextInputText.Ipt_Content_OnValueChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:MGS.UGUI.UITextInputText.Ipt_Content_OnEndEdit(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
         </member>
         <member name="T:MGS.UGUI.UIWidget">
             <summary>
