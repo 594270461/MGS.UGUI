@@ -694,6 +694,11 @@
             
             </summary>
         </member>
+        <member name="F:MGS.UGUI.UISearchSelector.lastSelect">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:MGS.UGUI.UISearchSelector.Keyword">
             <summary>
             
@@ -735,17 +740,23 @@
             </summary>
             <param name="ignoreSelect"></param>
         </member>
-        <member name="M:MGS.UGUI.UISearchSelector.Ipt_Keyword_OnValueChanged(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="keyword"></param>
-        </member>
         <member name="M:MGS.UGUI.UISearchSelector.Ipt_Keyword_OnSelectEvent(UnityEngine.EventSystems.BaseEventData)">
             <summary>
             
             </summary>
             <param name="data"></param>
+        </member>
+        <member name="M:MGS.UGUI.UISearchSelector.Ipt_Keyword_OnDeselectEvent(UnityEngine.EventSystems.BaseEventData)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:MGS.UGUI.UISearchSelector.Ipt_Keyword_OnValueChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="keyword"></param>
         </member>
         <member name="M:MGS.UGUI.UISearchSelector.Btn_Search_OnClick">
             <summary>
@@ -758,6 +769,18 @@
             </summary>
             <param name="index"></param>
             <param name="value"></param>
+        </member>
+        <member name="M:MGS.UGUI.UISearchSelector.CheckOptionNextFrame">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UISearchSelector.IsSelectBlankArea">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:MGS.UGUI.UISearchSelector.ShowSearchResults(System.String)">
             <summary>
