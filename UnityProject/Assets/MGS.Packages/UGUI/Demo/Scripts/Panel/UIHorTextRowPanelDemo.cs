@@ -14,19 +14,19 @@ using UnityEngine;
 
 namespace MGS.UGUI.Demo
 {
-    public class UIHTextRowFitterDemo : MonoBehaviour
+    public class UIHorTextRowPanelDemo : MonoBehaviour
     {
-        public UIHTextRowFitter textRowFitter;
+        public UIHorTextRowPanel textRowPanel;
 
         private void Start()
         {
-            var datas = new HTextRowData[]
+            var datas = new UIHorTextRowData[]
             {
-                new HTextRowData("Test tittle:", "Test content"),
-                new HTextRowData("Test a long lengh tittle:", "Test content"),
-                new HTextRowData("Test tittle:", "Test a long lengh content")
+                new UIHorTextRowData("Test tittle:", "Test content"),
+                new UIHorTextRowData("Test a long lengh tittle:", "Test content"),
+                new UIHorTextRowData("Test tittle:", "Test a long lengh content")
             };
-            textRowFitter.Refresh(datas);
+            textRowPanel.Refresh(datas);
         }
     }
 }
