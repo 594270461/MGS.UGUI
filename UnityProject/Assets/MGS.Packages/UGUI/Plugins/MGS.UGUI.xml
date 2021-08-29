@@ -4,47 +4,173 @@
         <name>MGS.UGUI</name>
     </assembly>
     <members>
-        <member name="T:MGS.UGUI.UIBehaviourExtension">
+        <member name="T:MGS.UGUI.UIComponentExtension">
             <summary>
-            UI behaviour extension.
+            Extension for UI component.
             </summary>
         </member>
-        <member name="M:MGS.UGUI.UIBehaviourExtension.RequireComponent``1(UnityEngine.EventSystems.UIBehaviour)">
+        <member name="M:MGS.UGUI.UIComponentExtension.RequireComponent``1(UnityEngine.GameObject)">
             <summary>
-            
+            Require component.
             </summary>
             <typeparam name="T"></typeparam>
-            <param name="ui"></param>
+            <param name="go"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UIBehaviourExtension.RequirePointerListener(UnityEngine.EventSystems.UIBehaviour)">
+        <member name="M:MGS.UGUI.UIComponentExtension.RequireComponent``1(UnityEngine.Component)">
             <summary>
-            
+            Require component.
             </summary>
-            <param name="ui"></param>
+            <typeparam name="T"></typeparam>
+            <param name="cpnt"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UIBehaviourExtension.RequireDragListener(UnityEngine.EventSystems.UIBehaviour)">
+        <member name="M:MGS.UGUI.UIComponentExtension.RequirePointerListener(UnityEngine.Component)">
             <summary>
-            
+            Require UIPointerListener component.
             </summary>
-            <param name="ui"></param>
+            <param name="rect"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UIBehaviourExtension.RequireSelectListener(UnityEngine.EventSystems.UIBehaviour)">
+        <member name="M:MGS.UGUI.UIComponentExtension.RequireDragListener(UnityEngine.Component)">
             <summary>
-            
+            Require UIDragListener component.
             </summary>
-            <param name="ui"></param>
+            <param name="rect"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UIBehaviourExtension.RequireCanvasRaycasterGroup(UnityEngine.EventSystems.UIBehaviour,System.Boolean,System.Int32)">
+        <member name="M:MGS.UGUI.UIComponentExtension.RequireSelectListener(UnityEngine.Component)">
             <summary>
-            
+            Require UISelectListener component.
             </summary>
-            <param name="ui"></param>
+            <param name="rect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIComponentExtension.RequireCanvasRaycasterGroup(UnityEngine.Component,System.Boolean,System.Int32)">
+            <summary>
+            Require Canvas,GraphicRaycaster,CanvasGroup component.
+            </summary>
+            <param name="rect"></param>
             <param name="overrideSorting"></param>
             <param name="sortingOrder"></param>
+        </member>
+        <member name="T:MGS.UGUI.UITransformExtension">
+            <summary>
+            Extension UI transform.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.GetLocalPosition(UnityEngine.RectTransform,UnityEngine.Camera,UnityEngine.Vector2)">
+            <summary>
+            Get local position in parent RectTransform.
+            </summary>
+            <param name="rect"></param>
+            <param name="uiCamera"></param>
+            <param name="screenPoint"></param>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.GetLocalPosition(UnityEngine.RectTransform,UnityEngine.Camera,UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            Get local position in parent RectTransform.
+            </summary>
+            <param name="rect"></param>
+            <param name="uiCamera"></param>
+            <param name="screenPoint"></param>
+            <param name="offset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.GetLocalPosition(UnityEngine.RectTransform,UnityEngine.Camera,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.TextAnchor)">
+            <summary>
+            Get local position in parent RectTransform.
+            </summary>
+            <param name="rect"></param>
+            <param name="uiCamera"></param>
+            <param name="screenPoint"></param>
+            <param name="offset"></param>
+            <param name="anchor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.SetPosition(UnityEngine.RectTransform,UnityEngine.Camera,UnityEngine.Vector2)">
+            <summary>
+            Set position in parent RectTransform.
+            </summary>
+            <param name="rect"></param>
+            <param name="uiCamera"></param>
+            <param name="screenPoint"></param>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.SetPosition(UnityEngine.RectTransform,UnityEngine.Camera,UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            Set position in parent RectTransform.
+            </summary>
+            <param name="rect"></param>
+            <param name="uiCamera"></param>
+            <param name="screenPoint"></param>
+            <param name="offset"></param>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.SetPosition(UnityEngine.RectTransform,UnityEngine.Camera,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.TextAnchor)">
+            <summary>
+            Set position in parent RectTransform.
+            </summary>
+            <param name="rect"></param>
+            <param name="uiCamera"></param>
+            <param name="screenPoint"></param>
+            <param name="offset"></param>
+            <param name="anchor"></param>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.GetLocalPositionClamp(UnityEngine.RectTransform,UnityEngine.RectOffset)">
+            <summary>
+            Get local position of RectTransform clamp in paren.
+            </summary>
+            <param name="rect"></param>
+            <param name="padding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.GetLocalPositionClamp(UnityEngine.RectTransform,UnityEngine.Vector3,UnityEngine.RectOffset)">
+            <summary>
+            Get local position of RectTransform clamp in paren.
+            </summary>
+            <param name="rect"></param>
+            <param name="localPoint"></param>
+            <param name="padding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.SetPositionClamp(UnityEngine.RectTransform,UnityEngine.RectOffset)">
+            <summary>
+            Set position of RectTransform clamp in paren.
+            </summary>
+            <param name="rect"></param>
+            <param name="padding"></param>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.SetPositionClamp(UnityEngine.RectTransform,UnityEngine.Vector3,UnityEngine.RectOffset)">
+            <summary>
+            Set position of RectTransform clamp in paren.
+            </summary>
+            <param name="rect"></param>
+            <param name="localPoint"></param>
+            <param name="padding"></param>
+        </member>
+        <member name="T:MGS.UGUI.UIPointerFollower">
+            <summary>
+            UI pointer follower.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIPointerFollower.anchor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIPointerFollower.offset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIPointerFollower.padding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIPointerFollower.Update">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:MGS.UGUI.UIDragger">
             <summary>
@@ -294,6 +420,88 @@
             UI positioner.
             </summary>
         </member>
+        <member name="F:MGS.UGUI.UIPositioner.uiCamera">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.Awake">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.GetLocalPosition(UnityEngine.Vector2)">
+            <summary>
+            Get local position in parent RectTransform.
+            </summary>
+            <param name="screenPoint"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.GetLocalPosition(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            Get local position in parent RectTransform.
+            </summary>
+            <param name="screenPoint"></param>
+            <param name="offset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.GetLocalPosition(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.TextAnchor)">
+            <summary>
+            Get local position in parent RectTransform.
+            </summary>
+            <param name="screenPoint"></param>
+            <param name="offset"></param>
+            <param name="anchor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.SetPosition(UnityEngine.Vector2)">
+            <summary>
+            Set position in parent RectTransform.
+            </summary>
+            <param name="screenPoint"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.SetPosition(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            Set position in parent RectTransform.
+            </summary>
+            <param name="screenPoint"></param>
+            <param name="offset"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.SetPosition(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.TextAnchor)">
+            <summary>
+            Set position in parent RectTransform.
+            </summary>
+            <param name="screenPoint"></param>
+            <param name="offset"></param>
+            <param name="anchor"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.GetLocalPositionClamp(UnityEngine.RectOffset)">
+            <summary>
+            Get local position of RectTransform clamp in paren.
+            </summary>
+            <param name="padding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.GetLocalPositionClamp(UnityEngine.Vector3,UnityEngine.RectOffset)">
+            <summary>
+            Get local position of RectTransform clamp in paren.
+            </summary>
+            <param name="localPoint"></param>
+            <param name="padding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.SetPositionClamp(UnityEngine.RectOffset)">
+            <summary>
+            Set position of RectTransform clamp in paren.
+            </summary>
+            <param name="padding"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.SetPositionClamp(UnityEngine.Vector3,UnityEngine.RectOffset)">
+            <summary>
+            Set position of RectTransform clamp in paren.
+            </summary>
+            <param name="localPoint"></param>
+            <param name="padding"></param>
+        </member>
         <member name="T:MGS.UGUI.UISizer">
             <summary>
             UI sizer.
@@ -521,21 +729,10 @@
             UI component.
             </summary>
         </member>
-        <member name="P:MGS.UGUI.UIComponent.RectTrans">
+        <member name="P:MGS.UGUI.UIComponent.Rect">
             <summary>
             RectTransform component.
             </summary>
-        </member>
-        <member name="P:MGS.UGUI.UIComponent.IsGOActive">
-            <summary>
-            The local active state of this GameObject. (Read Only)
-            </summary>
-        </member>
-        <member name="M:MGS.UGUI.UIComponent.SetGOActive(System.Boolean)">
-            <summary>
-            Activates/Deactivates the GameObject.
-            </summary>
-            <param name="isActive"></param>
         </member>
         <member name="T:MGS.UGUI.UICoroutine">
             <summary>
@@ -776,7 +973,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UISearchSelector.IsSelectBlankArea">
+        <member name="M:MGS.UGUI.UISearchSelector.IsSelectUIArea">
             <summary>
             
             </summary>
