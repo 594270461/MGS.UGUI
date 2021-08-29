@@ -149,7 +149,7 @@
         </member>
         <member name="T:MGS.UGUI.UIPointerFollower">
             <summary>
-            UI pointer follower.
+            UI pointer-follower.
             </summary>
         </member>
         <member name="F:MGS.UGUI.UIPointerFollower.anchor">
@@ -820,6 +820,100 @@
             </summary>
             <param name="index"></param>
             <param name="value"></param>
+        </member>
+        <member name="T:MGS.UGUI.HTextRowData">
+            <summary>
+            HText-Row-Data.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.HTextRowData.tittle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.HTextRowData.content">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.HTextRowData.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.HTextRowData.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="tittle"></param>
+            <param name="content"></param>
+        </member>
+        <member name="T:MGS.UGUI.HTextRowItem">
+            <summary>
+            HText-Row-Item.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.HTextRowItem.leftLayout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.HTextRowItem.leftText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.HTextRowItem.rightLayout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.HTextRowItem.rightText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.HTextRowItem.ResetLayout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.HTextRowItem.Refresh(MGS.UGUI.HTextRowData)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:MGS.UGUI.UIHTextRowFitter">
+            <summary>
+            UI HText-Row-Fitter.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIHTextRowFitter.item">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIHTextRowFitter.LeftMaxWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIHTextRowFitter.RightMaxWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIHTextRowFitter.items">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIHTextRowFitter.Refresh(MGS.UGUI.HTextRowData[])">
+            <summary>
+            
+            </summary>
+            <param name="datas"></param>
         </member>
         <member name="T:MGS.UGUI.UISearchSelector">
             <summary>
