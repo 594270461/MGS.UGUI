@@ -719,6 +719,28 @@
             UI panel.
             </summary>
         </member>
+        <member name="T:MGS.UGUI.UIPointerTrigger">
+            <summary>
+            UI Pointer-Trigger.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIPointerTrigger.panel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIPointerTrigger.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            
+            </summary>
+            <param name="eventData"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIPointerTrigger.OnPointerExit(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            
+            </summary>
+            <param name="eventData"></param>
+        </member>
         <member name="T:MGS.UGUI.UITrigger">
             <summary>
             UI trigger.
@@ -823,7 +845,7 @@
         </member>
         <member name="T:MGS.UGUI.UIHorTextRowData">
             <summary>
-            UI HText-Row-Data.
+            UI HorText-Row-Data.
             </summary>
         </member>
         <member name="F:MGS.UGUI.UIHorTextRowData.tittle">
@@ -850,7 +872,7 @@
         </member>
         <member name="T:MGS.UGUI.UIHorTextRowItem">
             <summary>
-            UI HText-Row-Item.
+            UI HorText-Row-Item.
             </summary>
         </member>
         <member name="F:MGS.UGUI.UIHorTextRowItem.leftLayout">
@@ -886,7 +908,7 @@
         </member>
         <member name="T:MGS.UGUI.UIHorTextRowPanel">
             <summary>
-            UI HText-Row-Panel.
+            UI HorText-Row-Panel.
             </summary>
         </member>
         <member name="F:MGS.UGUI.UIHorTextRowPanel.item">
