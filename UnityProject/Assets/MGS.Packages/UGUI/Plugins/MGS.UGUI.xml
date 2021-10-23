@@ -4,6 +4,70 @@
         <name>MGS.UGUI</name>
     </assembly>
     <members>
+        <member name="T:MGS.UGUI.Temp.UIButtonCollector">
+            <summary>
+            UI Button-Collector.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.Temp.UIButtonCollector.OnItemClickEvent">
+            <summary>
+            On item click event (Index of item, text of item).
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.Temp.UIButtonCollector.CreateItem">
+            <summary>
+            Create a new item from prefab.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.Temp.UIButtonCollector.OnItemClick(System.Int32,UnityEngine.UI.Text)">
+            <summary>
+            On item click event.
+            </summary>
+            <param name="index"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:MGS.UGUI.Temp.UIButtonCollector.RefreshItem(UnityEngine.UI.Button,MGS.UGUI.Temp.ButtonOptions)">
+            <summary>
+            Refresh item by options.
+            </summary>
+            <param name="item"></param>
+            <param name="options"></param>
+        </member>
+        <member name="T:MGS.UGUI.Temp.ButtonOptions">
+            <summary>
+            Options for button.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.Temp.ButtonOptions.text">
+            <summary>
+            Display text.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UITextCollector">
+            <summary>
+            UI Text-Collector.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITextCollector.RefreshItem(UnityEngine.UI.Text,System.String)">
+            <summary>
+            Refresh item by text.
+            </summary>
+            <param name="item"></param>
+            <param name="text"></param>
+        </member>
+        <member name="T:MGS.UGUI.UIImageCollector">
+            <summary>
+            UI Image-Collector.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIImageCollector.RefreshItem(UnityEngine.UI.Image,UnityEngine.Sprite)">
+            <summary>
+            Refresh item by sprite.
+            </summary>
+            <param name="item"></param>
+            <param name="sprite"></param>
+        </member>
         <member name="T:MGS.UGUI.UIComponentExtension">
             <summary>
             Extension for UI component.
@@ -405,6 +469,54 @@
             <param name="t"></param>
             <returns></returns>
         </member>
+        <member name="T:MGS.UGUI.UICollector`2">
+            <summary>
+            UI collector.
+            </summary>
+            <typeparam name="T">Type of item.</typeparam>
+            <typeparam name="K">Type of info for item.</typeparam>
+        </member>
+        <member name="F:MGS.UGUI.UICollector`2.container">
+            <summary>
+            Container of items.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UICollector`2.item">
+            <summary>
+            Prefab of item to clone.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UICollector`2.Refresh(System.Collections.Generic.ICollection{`1})">
+            <summary>
+            Refresh items by infos.
+            </summary>
+            <param name="infos">Infos to refresh items.</param>
+        </member>
+        <member name="M:MGS.UGUI.UICollector`2.RequireItems(System.Int32)">
+            <summary>
+            Require the number of items.
+            </summary>
+            <param name="count"></param>
+        </member>
+        <member name="M:MGS.UGUI.UICollector`2.CreateItem">
+            <summary>
+            Create a new item from prefab.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UICollector`2.DisposeItem(`0)">
+            <summary>
+            Dispose the item from container.
+            </summary>
+            <param name="item">Child index of item.</param>
+        </member>
+        <member name="M:MGS.UGUI.UICollector`2.RefreshItem(`0,`1)">
+            <summary>
+            Refresh item by info.
+            </summary>
+            <param name="item"></param>
+            <param name="info"></param>
+        </member>
         <member name="T:MGS.UGUI.UIHandler">
             <summary>
             UI handler.
@@ -751,9 +863,36 @@
             UI component.
             </summary>
         </member>
-        <member name="P:MGS.UGUI.UIComponent.Rect">
+        <member name="T:MGS.UGUI.RectUtility">
             <summary>
-            RectTransform component.
+            Utility for RectTransform.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.RectUtility.Mirror(UnityEngine.RectTransform,MGS.UGUI.MirrorMode)">
+            <summary>
+            Mirror RectTransform.
+            </summary>
+            <param name="rect">Target RectTransform.</param>
+            <param name="mode">Mode of mirror.</param>
+        </member>
+        <member name="T:MGS.UGUI.MirrorMode">
+            <summary>
+            Mode of mirror.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.MirrorMode.Horizontal">
+            <summary>
+            Horizontal mirror.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.MirrorMode.Vertical">
+            <summary>
+            Vertical mirror.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.MirrorMode.Both">
+            <summary>
+            Both horizontal and vertical mirror.
             </summary>
         </member>
         <member name="T:MGS.UGUI.UICoroutine">
