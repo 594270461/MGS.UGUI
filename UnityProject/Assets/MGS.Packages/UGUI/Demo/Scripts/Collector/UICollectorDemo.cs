@@ -10,7 +10,7 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using MGS.UGUI.Temp;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,36 +19,64 @@ namespace MGS.UGUI.Demo
     public class UICollectorDemo : MonoBehaviour
     {
         public UITextCollector textCollector;
-        public string[] texts;
+        public List<UITextOptions> txtOptions;
 
         [Space(5)]
         public UIImageCollector imageCollector;
-        public Sprite[] sprites;
+        public List<UIImageOptions> imgOptions;
 
         [Space(5)]
-        public Temp.UIButtonCollector buttonCollector;
-        public ButtonOptions[] buttonoptions;
+        public UIButtonCollector buttonCollector;
+        public List<UIButtonOptions> btnOptions;
 
         [Space(5)]
         public UICustomCollector customCollector;
-        public UICustomItemOptions[] itemOptions;
+        public List<UICustomCellOptions> cusOptions;
 
         [Space(5)]
-        public Button btnRefresh;
+        public Button btnAppend;
+        public Button btnRemove;
 
         private void Awake()
         {
-            buttonCollector.OnItemClickEvent += ButtonCollector_OnItemClickEvent;
-            btnRefresh.onClick.AddListener(BtnRefresh_OnClick);
+            buttonCollector.OnCellClickEvent += ButtonCollector_OnCellClickEvent;
+            btnAppend.onClick.AddListener(BtnAppend_OnClick);
+            btnRemove.onClick.AddListener(BtnRemove_OnClick);
         }
 
-        private void ButtonCollector_OnItemClickEvent(int index, string text)
+        private void ButtonCollector_OnCellClickEvent(UIButtonCell cell)
         {
-            Debug.LogFormat("ButtonCollector_OnItemClickEvent index: {0} text: {1}", index, text);
+            Debug.LogFormat("ButtonCollector_OnCellClickEvent index: {0} text: {1}",
+                cell.transform.GetSiblingIndex() - 1, cell.Info.text);
         }
 
-        private void BtnRefresh_OnClick()
+        private void BtnAppend_OnClick()
         {
+            txtOptions.Add(new UITextOptions { text = txtOptions[0].text });
+            imgOptions.Add(new UIImageOptions { sprite = imgOptions[0].sprite });
+            btnOptions.Add(new UIButtonOptions { text = btnOptions[0].text });
+            cusOptions.Add(new UICustomCellOptions { color = cusOptions[0].color, message = cusOptions[0].message });
+            RefreshCollectors();
+        }
+
+        private void BtnRemove_OnClick()
+        {
+            if (txtOptions.Count > 1)
+            {
+                txtOptions.RemoveAt(txtOptions.Count - 1);
+            }
+            if (imgOptions.Count > 1)
+            {
+                imgOptions.RemoveAt(imgOptions.Count - 1);
+            }
+            if (btnOptions.Count > 1)
+            {
+                btnOptions.RemoveAt(btnOptions.Count - 1);
+            }
+            if (cusOptions.Count > 1)
+            {
+                cusOptions.RemoveAt(cusOptions.Count - 1);
+            }
             RefreshCollectors();
         }
 
@@ -59,10 +87,10 @@ namespace MGS.UGUI.Demo
 
         private void RefreshCollectors()
         {
-            textCollector.Refresh(texts);
-            imageCollector.Refresh(sprites);
-            buttonCollector.Refresh(buttonoptions);
-            customCollector.Refresh(itemOptions);
+            textCollector.Refresh(txtOptions);
+            imageCollector.Refresh(imgOptions);
+            buttonCollector.Refresh(btnOptions);
+            customCollector.Refresh(cusOptions);
         }
     }
 }

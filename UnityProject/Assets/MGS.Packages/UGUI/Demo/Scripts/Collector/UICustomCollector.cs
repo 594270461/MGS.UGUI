@@ -12,11 +12,5 @@
 
 namespace MGS.UGUI.Demo
 {
-    public class UICustomCollector : UICollector<UICustomItem, UICustomItemOptions>
-    {
-        protected override void RefreshItem(UICustomItem item, UICustomItemOptions info)
-        {
-            item.Refresh(info);
-        }
-    }
+    public class UICustomCollector : UICollector<UICustomCell, UICustomCellOptions> { }
 }

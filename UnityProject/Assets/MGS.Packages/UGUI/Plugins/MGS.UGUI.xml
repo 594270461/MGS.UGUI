@@ -4,69 +4,221 @@
         <name>MGS.UGUI</name>
     </assembly>
     <members>
-        <member name="T:MGS.UGUI.Temp.UIButtonCollector">
+        <member name="T:MGS.UGUI.UIRefreshable`1">
             <summary>
-            UI Button-Collector.
+            Base for UI refreshable.
+            </summary>
+            <typeparam name="T">Type of info to refresh UI.</typeparam>
+        </member>
+        <member name="P:MGS.UGUI.UIRefreshable`1.Info">
+            <summary>
+            Info of UI.
             </summary>
         </member>
-        <member name="E:MGS.UGUI.Temp.UIButtonCollector.OnItemClickEvent">
+        <member name="M:MGS.UGUI.UIRefreshable`1.Refresh(`0)">
             <summary>
-            On item click event (Index of item, text of item).
+            Refresh UI.
+            </summary>
+            <param name="info">Info to refresh UI.</param>
+        </member>
+        <member name="M:MGS.UGUI.UIRefreshable`1.OnRefresh(`0)">
+            <summary>
+            On refresh UI.
+            </summary>
+            <param name="info">Info to refresh UI.</param>
+        </member>
+        <member name="T:MGS.UGUI.UIButtonCell">
+            <summary>
+            UI button cell.
             </summary>
         </member>
-        <member name="M:MGS.UGUI.Temp.UIButtonCollector.CreateItem">
+        <member name="F:MGS.UGUI.UIButtonCell.button">
             <summary>
-            Create a new item from prefab.
+            Button component.
             </summary>
-            <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.Temp.UIButtonCollector.OnItemClick(System.Int32,UnityEngine.UI.Text)">
+        <member name="F:MGS.UGUI.UIButtonCell.text">
             <summary>
-            On item click event.
+            Text component.
             </summary>
-            <param name="index"></param>
-            <param name="text"></param>
         </member>
-        <member name="M:MGS.UGUI.Temp.UIButtonCollector.RefreshItem(UnityEngine.UI.Button,MGS.UGUI.Temp.ButtonOptions)">
+        <member name="M:MGS.UGUI.UIButtonCell.Reset">
             <summary>
-            Refresh item by options.
+            Reset component.
             </summary>
-            <param name="item"></param>
-            <param name="options"></param>
         </member>
-        <member name="T:MGS.UGUI.Temp.ButtonOptions">
+        <member name="M:MGS.UGUI.UIButtonCell.OnRefresh(MGS.UGUI.UIButtonOptions)">
+            <summary>
+            On refresh image.
+            </summary>
+            <param name="options">Options to refresh button.</param>
+        </member>
+        <member name="T:MGS.UGUI.UIButtonOptions">
             <summary>
             Options for button.
             </summary>
         </member>
-        <member name="F:MGS.UGUI.Temp.ButtonOptions.text">
+        <member name="F:MGS.UGUI.UIButtonOptions.text">
             <summary>
             Display text.
             </summary>
         </member>
-        <member name="T:MGS.UGUI.UITextCollector">
+        <member name="T:MGS.UGUI.UICell`1">
             <summary>
-            UI Text-Collector.
+            UI cell.
+            </summary>
+            <typeparam name="T">Type of info to refresh cell.</typeparam>
+        </member>
+        <member name="T:MGS.UGUI.UIImageCell">
+            <summary>
+            UI image cell.
             </summary>
         </member>
-        <member name="M:MGS.UGUI.UITextCollector.RefreshItem(UnityEngine.UI.Text,System.String)">
+        <member name="F:MGS.UGUI.UIImageCell.image">
             <summary>
-            Refresh item by text.
+            Image component.
             </summary>
-            <param name="item"></param>
-            <param name="text"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIImageCell.Reset">
+            <summary>
+            Reset component.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIImageCell.OnRefresh(MGS.UGUI.UIImageOptions)">
+            <summary>
+            On refresh image.
+            </summary>
+            <param name="options">Options to refresh image.</param>
+        </member>
+        <member name="T:MGS.UGUI.UIImageOptions">
+            <summary>
+            Options for image.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIImageOptions.sprite">
+            <summary>
+            Display sprite.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UITextCell">
+            <summary>
+            UI text cell.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextCell.text">
+            <summary>
+            Text component.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITextCell.Reset">
+            <summary>
+            Reset component.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITextCell.OnRefresh(MGS.UGUI.UITextOptions)">
+            <summary>
+            On refresh text.
+            </summary>
+            <param name="options">Options to refresh text.</param>
+        </member>
+        <member name="T:MGS.UGUI.UITextOptions">
+            <summary>
+            Options for text.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextOptions.text">
+            <summary>
+            Display text.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UIButtonCollector">
+            <summary>
+            UI button collector.
+            </summary>
+        </member>
+        <member name="E:MGS.UGUI.UIButtonCollector.OnCellClickEvent">
+            <summary>
+            On cell click event.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIButtonCollector.CreateCell">
+            <summary>
+            Create a new cell from prefab.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIButtonCollector.OnCellClick(MGS.UGUI.UIButtonCell)">
+            <summary>
+            On cell click event.
+            </summary>
+            <param name="cell">Button cell.</param>
         </member>
         <member name="T:MGS.UGUI.UIImageCollector">
             <summary>
-            UI Image-Collector.
+            UI image collector.
             </summary>
         </member>
-        <member name="M:MGS.UGUI.UIImageCollector.RefreshItem(UnityEngine.UI.Image,UnityEngine.Sprite)">
+        <member name="T:MGS.UGUI.UITextCollector">
             <summary>
-            Refresh item by sprite.
+            UI text collector.
             </summary>
-            <param name="item"></param>
-            <param name="sprite"></param>
+        </member>
+        <member name="T:MGS.UGUI.UITextClipper">
+            <summary>
+            UI text clipper.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextClipper.text">
+            <summary>
+            Text component.
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UITextClipper.Text">
+            <summary>
+            String value of this text.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITextClipper.originText">
+            <summary>
+            Origin string value of this text.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITextClipper.Reset">
+            <summary>
+            Reset component.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITextClipper.Awake">
+            <summary>
+            Awake component.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITextClipper.OnClipText">
+            <summary>
+            On clip text.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UITextExtension">
+            <summary>
+            Extension UI Text.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITextExtension.GetClippingText(UnityEngine.UI.Text,System.String,System.String)">
+            <summary>
+            Get clipping text content.
+            </summary>
+            <param name="text">Text component.</param>
+            <param name="content">Origin content set to Text.</param>
+            <param name="stamp">Stamp mark if clipped.</param>
+            <returns>Clipping text content.</returns>
+        </member>
+        <member name="M:MGS.UGUI.UITextExtension.SetClippingText(UnityEngine.UI.Text,System.String,System.String)">
+            <summary>
+            Set clipping text content.
+            </summary>
+            <param name="text">Text component.</param>
+            <param name="content">Origin content set to Text.</param>
+            <param name="stamp">Stamp mark if clipped.</param>
         </member>
         <member name="T:MGS.UGUI.UIComponentExtension">
             <summary>
@@ -179,7 +331,7 @@
             <param name="offset"></param>
             <param name="anchor"></param>
         </member>
-        <member name="M:MGS.UGUI.UITransformExtension.GetLocalPositionClamp(UnityEngine.RectTransform,UnityEngine.RectOffset)">
+        <member name="M:MGS.UGUI.UITransformExtension.GetLocalPosition(UnityEngine.RectTransform,UnityEngine.RectOffset)">
             <summary>
             Get local position of RectTransform clamp in paren.
             </summary>
@@ -187,29 +339,92 @@
             <param name="padding"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UITransformExtension.GetLocalPositionClamp(UnityEngine.RectTransform,UnityEngine.Vector3,UnityEngine.RectOffset)">
+        <member name="M:MGS.UGUI.UITransformExtension.GetLocalPosition(UnityEngine.RectTransform,UnityEngine.Vector3,UnityEngine.RectOffset)">
             <summary>
             Get local position of RectTransform clamp in paren.
             </summary>
             <param name="rect"></param>
-            <param name="localPoint"></param>
+            <param name="localPosition"></param>
             <param name="padding"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UITransformExtension.SetPositionClamp(UnityEngine.RectTransform,UnityEngine.RectOffset)">
+        <member name="M:MGS.UGUI.UITransformExtension.SetPosition(UnityEngine.RectTransform,UnityEngine.RectOffset)">
             <summary>
             Set position of RectTransform clamp in paren.
             </summary>
             <param name="rect"></param>
             <param name="padding"></param>
         </member>
-        <member name="M:MGS.UGUI.UITransformExtension.SetPositionClamp(UnityEngine.RectTransform,UnityEngine.Vector3,UnityEngine.RectOffset)">
+        <member name="M:MGS.UGUI.UITransformExtension.SetPosition(UnityEngine.RectTransform,UnityEngine.Vector3,UnityEngine.RectOffset)">
             <summary>
             Set position of RectTransform clamp in paren.
             </summary>
             <param name="rect"></param>
-            <param name="localPoint"></param>
+            <param name="localPosition"></param>
             <param name="padding"></param>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.GetAnchoredPosition(UnityEngine.RectTransform,MGS.UGUI.UIMirrorMode,UnityEngine.Vector2@,UnityEngine.Vector2@,UnityEngine.Vector2@)">
+            <summary>
+            Get anchored position of RectTransform apply mirror.
+            </summary>
+            <param name="rect"></param>
+            <param name="mode"></param>
+            <param name="anchorMin"></param>
+            <param name="anchorMax"></param>
+            <param name="pivot"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UITransformExtension.SetPosition(UnityEngine.RectTransform,MGS.UGUI.UIMirrorMode)">
+            <summary>
+            Set position of RectTransform apply mirror.
+            </summary>
+            <param name="rect"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="T:MGS.UGUI.UIMirrorMode">
+            <summary>
+            Mode of mirror UI.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIMirrorMode.Horizontal">
+            <summary>
+            Horizontal mirror.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIMirrorMode.Vertical">
+            <summary>
+            Vertical mirror.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIMirrorMode.Both">
+            <summary>
+            Both horizontal and vertical mirror.
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UIText">
+            <summary>
+            UI text.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIText.maxWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIText.maxHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UIText.preferredWidth">
+            <summary>
+            Preferred width.
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UIText.preferredHeight">
+            <summary>
+            Preferred height.
+            </summary>
         </member>
         <member name="T:MGS.UGUI.UIPointerFollower">
             <summary>
@@ -473,49 +688,49 @@
             <summary>
             UI collector.
             </summary>
-            <typeparam name="T">Type of item.</typeparam>
-            <typeparam name="K">Type of info for item.</typeparam>
+            <typeparam name="TCell">Type of cell.</typeparam>
+            <typeparam name="TInfo">Type of info to refresh cell.</typeparam>
         </member>
         <member name="F:MGS.UGUI.UICollector`2.container">
             <summary>
-            Container of items.
+            Container of cells.
             </summary>
         </member>
-        <member name="F:MGS.UGUI.UICollector`2.item">
+        <member name="F:MGS.UGUI.UICollector`2.cell">
             <summary>
-            Prefab of item to clone.
+            Prefab of cell to clone.
             </summary>
         </member>
-        <member name="M:MGS.UGUI.UICollector`2.Refresh(System.Collections.Generic.ICollection{`1})">
+        <member name="M:MGS.UGUI.UICollector`2.OnRefresh(System.Collections.Generic.ICollection{`1})">
             <summary>
-            Refresh items by infos.
+            On refresh UI.
             </summary>
-            <param name="infos">Infos to refresh items.</param>
+            <param name="infos">Infos to refresh collector.</param>
         </member>
-        <member name="M:MGS.UGUI.UICollector`2.RequireItems(System.Int32)">
+        <member name="M:MGS.UGUI.UICollector`2.RequireCells(System.Int32)">
             <summary>
-            Require the number of items.
+            Require the number of cells.
             </summary>
             <param name="count"></param>
         </member>
-        <member name="M:MGS.UGUI.UICollector`2.CreateItem">
+        <member name="M:MGS.UGUI.UICollector`2.CreateCell">
             <summary>
-            Create a new item from prefab.
+            Create a new cell from prefab.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UICollector`2.DisposeItem(`0)">
+        <member name="M:MGS.UGUI.UICollector`2.RefreshCell(`0,`1)">
             <summary>
-            Dispose the item from container.
+            Refresh cell by info.
             </summary>
-            <param name="item">Child index of item.</param>
-        </member>
-        <member name="M:MGS.UGUI.UICollector`2.RefreshItem(`0,`1)">
-            <summary>
-            Refresh item by info.
-            </summary>
-            <param name="item"></param>
+            <param name="cell"></param>
             <param name="info"></param>
+        </member>
+        <member name="M:MGS.UGUI.UICollector`2.DisposeCell(`0)">
+            <summary>
+            Dispose the cell from container.
+            </summary>
+            <param name="cell">Child index of cell.</param>
         </member>
         <member name="T:MGS.UGUI.UIHandler">
             <summary>
@@ -532,9 +747,9 @@
             UI positioner.
             </summary>
         </member>
-        <member name="F:MGS.UGUI.UIPositioner.uiCamera">
+        <member name="P:MGS.UGUI.UIPositioner.UICamera">
             <summary>
-            
+            Camera for UI.
             </summary>
         </member>
         <member name="M:MGS.UGUI.UIPositioner.Awake">
@@ -586,14 +801,14 @@
             <param name="offset"></param>
             <param name="anchor"></param>
         </member>
-        <member name="M:MGS.UGUI.UIPositioner.GetLocalPositionClamp(UnityEngine.RectOffset)">
+        <member name="M:MGS.UGUI.UIPositioner.GetLocalPosition(UnityEngine.RectOffset)">
             <summary>
             Get local position of RectTransform clamp in paren.
             </summary>
             <param name="padding"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UIPositioner.GetLocalPositionClamp(UnityEngine.Vector3,UnityEngine.RectOffset)">
+        <member name="M:MGS.UGUI.UIPositioner.GetLocalPosition(UnityEngine.Vector3,UnityEngine.RectOffset)">
             <summary>
             Get local position of RectTransform clamp in paren.
             </summary>
@@ -601,23 +816,56 @@
             <param name="padding"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.UGUI.UIPositioner.SetPositionClamp(UnityEngine.RectOffset)">
+        <member name="M:MGS.UGUI.UIPositioner.SetPosition(UnityEngine.RectOffset)">
             <summary>
             Set position of RectTransform clamp in paren.
             </summary>
             <param name="padding"></param>
         </member>
-        <member name="M:MGS.UGUI.UIPositioner.SetPositionClamp(UnityEngine.Vector3,UnityEngine.RectOffset)">
+        <member name="M:MGS.UGUI.UIPositioner.SetPosition(UnityEngine.Vector3,UnityEngine.RectOffset)">
             <summary>
             Set position of RectTransform clamp in paren.
             </summary>
             <param name="localPoint"></param>
             <param name="padding"></param>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.GetAnchoredPosition(MGS.UGUI.UIMirrorMode,UnityEngine.Vector2@,UnityEngine.Vector2@,UnityEngine.Vector2@)">
+            <summary>
+            Get anchored position of RectTransform apply mirror.
+            </summary>
+            <param name="mode"></param>
+            <param name="anchorMin"></param>
+            <param name="anchorMax"></param>
+            <param name="pivot"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.UGUI.UIPositioner.SetPosition(MGS.UGUI.UIMirrorMode)">
+            <summary>
+            Set position of RectTransform apply mirror.
+            </summary>
+            <param name="mode"></param>
         </member>
         <member name="T:MGS.UGUI.UISizer">
             <summary>
             UI sizer.
             </summary>
+        </member>
+        <member name="T:MGS.UGUI.IUIRefreshable`1">
+            <summary>
+            Interface for UI refreshable.
+            </summary>
+            <typeparam name="T">Type of info to refresh UI.</typeparam>
+        </member>
+        <member name="P:MGS.UGUI.IUIRefreshable`1.Info">
+            <summary>
+            Info of UI.
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.IUIRefreshable`1.Refresh(`0)">
+            <summary>
+            Refresh UI.
+            </summary>
+            <param name="info">Info to refresh UI.</param>
         </member>
         <member name="T:MGS.UGUI.UIDragListener">
              <summary>
@@ -863,36 +1111,9 @@
             UI component.
             </summary>
         </member>
-        <member name="T:MGS.UGUI.RectUtility">
+        <member name="P:MGS.UGUI.UIComponent.RectTransform">
             <summary>
-            Utility for RectTransform.
-            </summary>
-        </member>
-        <member name="M:MGS.UGUI.RectUtility.Mirror(UnityEngine.RectTransform,MGS.UGUI.MirrorMode)">
-            <summary>
-            Mirror RectTransform.
-            </summary>
-            <param name="rect">Target RectTransform.</param>
-            <param name="mode">Mode of mirror.</param>
-        </member>
-        <member name="T:MGS.UGUI.MirrorMode">
-            <summary>
-            Mode of mirror.
-            </summary>
-        </member>
-        <member name="F:MGS.UGUI.MirrorMode.Horizontal">
-            <summary>
-            Horizontal mirror.
-            </summary>
-        </member>
-        <member name="F:MGS.UGUI.MirrorMode.Vertical">
-            <summary>
-            Vertical mirror.
-            </summary>
-        </member>
-        <member name="F:MGS.UGUI.MirrorMode.Both">
-            <summary>
-            Both horizontal and vertical mirror.
+            The RectTransform attached to this GameObject.
             </summary>
         </member>
         <member name="T:MGS.UGUI.UICoroutine">
@@ -927,60 +1148,6 @@
             <param name="tick"></param>
             <param name="elapsed"></param>
             <returns></returns>
-        </member>
-        <member name="T:MGS.UGUI.UIButtonCollector">
-            <summary>
-            UI Button-Collector.
-            </summary>
-        </member>
-        <member name="F:MGS.UGUI.UIButtonCollector.content">
-            <summary>
-            Root of button items.
-            </summary>
-        </member>
-        <member name="F:MGS.UGUI.UIButtonCollector.item">
-            <summary>
-            Prefab for item clone.
-            </summary>
-        </member>
-        <member name="F:MGS.UGUI.UIButtonCollector.maxCount">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:MGS.UGUI.UIButtonCollector.MaxCount">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="E:MGS.UGUI.UIButtonCollector.OnItemClickEvent">
-            <summary>
-            On item click event (Index of item, value of item).
-            </summary>
-        </member>
-        <member name="F:MGS.UGUI.UIButtonCollector.onItemClickEvent">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:MGS.UGUI.UIButtonCollector.Refresh(System.String[])">
-            <summary>
-            Refresh button item for data items.
-            </summary>
-            <param name="items"></param>
-        </member>
-        <member name="M:MGS.UGUI.UIButtonCollector.SetContentHeight(System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="itemCount"></param>
-        </member>
-        <member name="M:MGS.UGUI.UIButtonCollector.Item_OnClick(System.Int32,System.String)">
-            <summary>
-            
-            </summary>
-            <param name="index"></param>
-            <param name="value"></param>
         </member>
         <member name="T:MGS.UGUI.UIHorTextRowData">
             <summary>

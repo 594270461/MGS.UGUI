@@ -1,7 +1,7 @@
 ﻿/*************************************************************************
  *  Copyright (c) 2021 Mogoson. All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  UICustomItem.cs
+ *  File         :  UICustomCell.cs
  *  Description  :  Null.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -16,12 +16,12 @@ using UnityEngine.UI;
 
 namespace MGS.UGUI.Demo
 {
-    public class UICustomItem : MonoBehaviour
+    public class UICustomCell : UIRefreshable<UICustomCellOptions>
     {
         public Image Image;
         public Text text;
 
-        public void Refresh(UICustomItemOptions options)
+        protected override void OnRefresh(UICustomCellOptions options)
         {
             Image.color = options.color;
             text.text = options.message;
@@ -29,7 +29,7 @@ namespace MGS.UGUI.Demo
     }
 
     [Serializable]
-    public struct UICustomItemOptions
+    public struct UICustomCellOptions
     {
         public Color color;
         public string message;
