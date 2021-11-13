@@ -198,6 +198,177 @@
             On clip text.
             </summary>
         </member>
+        <member name="T:MGS.UGUI.UIDialog">
+            <summary>
+            UI dialog.
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.txtTittle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.btnMinimize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.btnClose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.imgIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.txtContent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.btnYes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.txtYes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.btnNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.txtNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.btnCancel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.txtCancel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialog.callback">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIDialog.Awake">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIDialog.BindingEvents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIDialog.Minimize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIDialog.Close">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UIDialog.OnRefresh(MGS.UGUI.UIDialogOption)">
+            <summary>
+            
+            </summary>
+            <param name="option"></param>
+        </member>
+        <member name="T:MGS.UGUI.UIDialogOption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogOption.tittle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogOption.minimizeButton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogOption.closeButton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogOption.icon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogOption.content">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogOption.yesButton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogOption.noButton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogOption.cancelButton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogOption.callback">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MGS.UGUI.UIDialogResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogResult.Minimize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogResult.Close">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogResult.Yes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogResult.No">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UIDialogResult.Cancel">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:MGS.UGUI.UITextExtension">
             <summary>
             Extension UI Text.
