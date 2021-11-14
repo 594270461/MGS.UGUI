@@ -369,6 +369,37 @@
             
             </summary>
         </member>
+        <member name="T:MGS.UGUI.UITooltip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MGS.UGUI.UITooltip.text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UITooltip.MaxWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MGS.UGUI.UITooltip.MaxHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITooltip.Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MGS.UGUI.UITooltip.OnRefresh(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+        </member>
         <member name="T:MGS.UGUI.UITextExtension">
             <summary>
             Extension UI Text.

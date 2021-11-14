@@ -39,7 +39,7 @@ namespace MGS.UGUI.Demo
                     minimizeButton = true,
                     closeButton = true,
                     content = "This is demo for dialog box test.",
-                    yesButton = "Confirm",
+                    yesButton = "OK",
                     callback = call
                 };
                 dialogBox.Refresh(option);
@@ -49,12 +49,12 @@ namespace MGS.UGUI.Demo
             {
                 var option = new UIDialogOption
                 {
-                    tittle = "Select",
+                    tittle = "Select Y/N",
                     minimizeButton = true,
                     closeButton = true,
-                    content = "This is demo for dialog box test\r\nYou can select do or not.",
-                    yesButton = "Do It",
-                    noButton = "Not Do It",
+                    content = "This is demo for dialog box test, you can select Yes or No.",
+                    yesButton = "Yes",
+                    noButton = "No",
                     callback = call
                 };
                 dialogBox.Refresh(option);
@@ -64,13 +64,13 @@ namespace MGS.UGUI.Demo
             {
                 var option = new UIDialogOption
                 {
-                    tittle = "Select",
+                    tittle = "Select Y/N/C",
                     minimizeButton = true,
                     closeButton = true,
-                    content = "This is demo for dialog box test\r\nYou can select do or not, or cancel.",
-                    yesButton = "Do it",
-                    noButton = "Not Do It",
-                    cancelButton = "Just Cancel",
+                    content = "This is demo for dialog box test, you can select Yes or No, or Cancel.",
+                    yesButton = "Yes",
+                    noButton = "No",
+                    cancelButton = "Cancel",
                     callback = call
                 };
                 dialogBox.Refresh(option);
